@@ -2,7 +2,7 @@ import React ,{Component} from 'react';
 import {connect} from 'react-redux';
 import { createAction } from 'redux-actions';
 import Test from './TestContainer/test';
- 
+ import { Router, Route, Link } from 'react-router'
  class App extends Component{
 
 		Submit(){
@@ -14,11 +14,13 @@ import Test from './TestContainer/test';
 		const user = this.props.user;
 		return(
 			<div className="container">
-				<p className="text">
+				<div className="text">
 					Hello World! {JSON.stringify(user.test)}
 					<br/>
-				<button onClick={this.Submit.bind(this)}>Click</button>	
-				</p>
+					{this.props.children}
+				<button onClick={this.Submit.bind(this)}>Click</button> 
+				<Link to='/test'>GoToTestRoute</Link>	
+				</div>
 			</div>
 			)
 	}
