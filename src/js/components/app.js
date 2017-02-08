@@ -2,6 +2,7 @@ import React ,{Component} from 'react';
 import {connect} from 'react-redux';
 import { createAction } from 'redux-actions';
 import Test from './TestContainer/test';
+import Header from './header/header';
  import { Router, Route, Link } from 'react-router'
  class App extends Component{
 
@@ -13,13 +14,14 @@ import Test from './TestContainer/test';
 	render(){
 		const user = this.props.user;
 		return(
-			<div className="container">
+			<div className="">
+				<Header />
 				<div className="text">
 					Hello World! {JSON.stringify(user.test)}
 					<br/>
-					{this.props.children}
-				<button onClick={this.Submit.bind(this)}>Click</button> 
+				<button className=" btn btn-default" onClick={this.Submit.bind(this)}>Click</button> 
 				<Link to='/test'>GoToTestRoute</Link>	
+				{this.props.children}
 				</div>
 			</div>
 			)

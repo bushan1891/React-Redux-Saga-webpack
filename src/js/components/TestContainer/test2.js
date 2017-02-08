@@ -3,16 +3,14 @@ import {connect} from 'react-redux';
 import { createAction } from 'redux-actions';
 import { Router, Route, Link } from 'react-router'
 
-class Test extends Component{
+class Test2 extends Component{
 	render(){
 		return (
-			<div>
-				Hey from Test 
-					<div>
-							<Link to='/test/2'>Go to nested route </Link>	
-					</div>
-
-				{this.props.children}
+			<div >
+				Hey from Test 2
+                <div>
+                    <Link to='/test'>Back to Test </Link>	
+                </div>
 			</div>
 			)
 	}
@@ -32,4 +30,4 @@ function mapStateToProps(state){
 }
 
 
-export default connect (mapStateToProps,mapDispatchToProps)(Test);
+export default connect (mapStateToProps,mapDispatchToProps)(Test2);

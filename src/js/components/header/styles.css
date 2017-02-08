@@ -1,0 +1,14 @@
+.nav_container{
+    background-color: black;
+    color: white;
+    width:100%;
+    overflow: auto;
+}
+.nav{
+    list-style: none;
+    height:2em;
+}
+.nav_item{
+float:left;
+margin:1em;
+}
