@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { createAction } from 'redux-actions';
 import Test from './TestContainer/test';
 import Header from './header/header';
+import Counter from './counter/conter';
  import { Router, Route, Link } from 'react-router'
  class App extends Component{
 
@@ -23,6 +24,10 @@ import Header from './header/header';
 				<Link to='/test'>GoToTestRoute</Link>	
 				{this.props.children}
 				</div>
+
+				<div className="">
+				</div>
+
 			</div>
 			)
 	}

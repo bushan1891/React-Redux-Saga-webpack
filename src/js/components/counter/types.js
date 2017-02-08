@@ -1,0 +1,3 @@
+export const START_COUNTER ='START_COUNTER';
+export const STOP_COUNTER ='END_COUNTER';
+export const INCRIMENT ='INCRIMENT';
